@@ -198,7 +198,7 @@ const PDFView = ({click}) => {
     console.log(pdfData)
 
     return (
-        <div>
+        <>
             {isCliente && <PDFDownloadLink document={
                 <Document>
                     <Page style={styles.body} size="A4" fixed >
@@ -456,7 +456,7 @@ const PDFView = ({click}) => {
                     <Button style={'buttonSecondary'} click={click}>pdf</Button>
            
             </PDFDownloadLink>}
-        </div>
+        </>
     )
 }
 
