@@ -502,6 +502,7 @@ function CotizacionTerrestre() {
                             return (
                                 <div className={style.inputsAll} key={index}>
                                     <input type="text" name={`INCLUYE${index}`} onChange={handleEventChange} />
+<span className={style.counterLess} onClick={() => handlerCounterThree('less')}>-</span>
                                 </div>
                             )
                         })
@@ -523,6 +524,7 @@ function CotizacionTerrestre() {
 
                                 <div className={style.inputsAll} key={index}>
                                     <input type="text" name={`EXCLUYE${index}`} onChange={handleEventChange} />
+<span className={style.counterLess} onClick={() => handlerCounterThree('less')}>-</span>
                                 </div>
                             )
                         })
