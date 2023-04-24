@@ -538,7 +538,7 @@ let cotizacionNo = userDB.CotizacionTerrestre
                         <Button style={'buttonPrimary'} click={handlerPdfButton}>Guardar</Button>
 <InvoicePDF>
                         <Button style={'buttonSecondary'}>Completar</Button>
-<InvoicePDF />
+</InvoicePDF>
                     </div>
                         
                                         
