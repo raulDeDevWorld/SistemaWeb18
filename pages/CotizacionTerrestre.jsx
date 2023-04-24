@@ -488,6 +488,12 @@ function CotizacionTerrestre() {
                     </div>
 
                     <br />
+
+<div className={style.containerFilter}>
+                        <Button style={'buttonSecondary'} click={handlerFilterButton}>Completar</Button>
+                    </div>
+                    <br />
+
                     <div className={style.subtitle}>INCLUYE <span className={style.counterPluss} onClick={() => handlerCounterThree('pluss')}>+</span> <span className={style.counterLess} onClick={() => handlerCounterThree('less')}>-</span></div>
                     {
                         incluye.map((i, index) => {
@@ -498,6 +504,11 @@ function CotizacionTerrestre() {
                             )
                         })
                     }
+                    <br />
+
+<div className={style.containerFilter}>
+                        <Button style={'buttonSecondary'} click={handlerFilterButton}>Completar</Button>
+                    </div>
                     <br />
 
                     <div className={style.subtitle}>EXCLUYE <span className={style.counterPluss} onClick={() => handlerCounterFour('pluss')}>+</span> <span className={style.counterLess} onClick={() => handlerCounterFour('less')}>-</span></div>
@@ -520,8 +531,14 @@ function CotizacionTerrestre() {
                         <span>Elaborado por</span>
                         <input type="text" name={`ELABORADOR`} onChange={handleEventChange} placeholder="ELABORADO POR" />
                     </div>
-<Button style={'buttonSecondary'} click={handlerFilterButton}>Completar Inclusiones</Button>
+
         
+
+
+
+
+
+
                 </form>
             </div>}
             <InvoicePDF click={handlerPdfButton} />
