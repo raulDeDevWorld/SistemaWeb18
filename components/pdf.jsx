@@ -458,7 +458,7 @@ const PDFView = ({click}) => {
                     <Button style={'buttonSecondary'} click={click}>pdf</Button>
                   
             </PDFDownloadLink>}
-        </>
+        </div>
     )
 }
 
