@@ -453,9 +453,9 @@ const PDFView = ({click}) => {
 
 
                
-                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                   
                     <Button style={'buttonSecondary'} click={click}>pdf</Button>
-                </div>
+               
             </PDFDownloadLink>}
         </div>
     )
