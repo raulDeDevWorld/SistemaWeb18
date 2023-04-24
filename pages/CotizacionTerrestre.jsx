@@ -490,6 +490,8 @@ function CotizacionTerrestre() {
                     <br />
 
 <div className={style.containerFilter}>
+                        <Button style={'buttonPrimary'} click={handlerFilterButton}>Guardar</Button>
+
                         <Button style={'buttonSecondary'} click={handlerFilterButton}>Completar</Button>
                     </div>
                     <br />
@@ -507,6 +509,8 @@ function CotizacionTerrestre() {
                     <br />
 
 <div className={style.containerFilter}>
+                        <Button style={'buttonPrimary'} click={handlerFilterButton}>Guardar</Button>
+
                         <Button style={'buttonSecondary'} click={handlerFilterButton}>Completar</Button>
                     </div>
                     <br />
