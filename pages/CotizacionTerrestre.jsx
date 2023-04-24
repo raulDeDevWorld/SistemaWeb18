@@ -520,6 +520,8 @@ function CotizacionTerrestre() {
                         <span>Elaborado por</span>
                         <input type="text" name={`ELABORADOR`} onChange={handleEventChange} placeholder="ELABORADO POR" />
                     </div>
+<Button style={'buttonSecondary'} click={handlerFilterButton}>Completar Inclusiones</Button>
+        
                 </form>
             </div>}
             <InvoicePDF click={handlerPdfButton} />
