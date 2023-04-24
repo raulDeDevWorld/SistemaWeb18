@@ -198,7 +198,7 @@ const PDFView = ({click}) => {
     console.log(pdfData)
 
     return (
-        <div style={{display: 'flex', justifyContent: 'center', background: 'red', width: '50%', padding: '0px'}}>
+        <div style={{display: 'flex', justifyContent: 'center', width: '100%', padding: '0px'}}>
             {isCliente && <PDFDownloadLink document={
                 <Document>
                     <Page style={styles.body} size="A4" fixed >
