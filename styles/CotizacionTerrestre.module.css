@@ -326,7 +326,7 @@
         display: none;
     }
 
-    .form input::placeholder {
+    .form input::placeholder { 
         color: rgb(102, 102, 102);
     }
 }
