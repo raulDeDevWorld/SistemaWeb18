@@ -510,7 +510,7 @@ function complete (word) {
 <div className={style.containerFilter}>
                         <Button style={'buttonPrimary'} click={()=>savei('excluye')}>Guardar</Button>
 
-                        <Button style={'buttonSecondary'} click={()=>complete('excluye'}>Completar</Button>
+                        <Button style={'buttonSecondary'} click={()=>complete('excluye')}>Completar</Button>
                     </div>
                     <br />
 
