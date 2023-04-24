@@ -20,7 +20,7 @@
 }
 
 
-.containerFilter :nth-child(1) {
+.containerFilter input:nth-child(1) {
     margin: 5px;
     cursor: pointer;
     text-align: center;
