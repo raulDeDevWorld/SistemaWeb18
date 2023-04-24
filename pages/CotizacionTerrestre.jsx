@@ -535,10 +535,9 @@ let cotizacionNo = userDB.CotizacionTerrestre
                 </form>
             </div>}
 <div className={style.containerFilter}>
-                        <Button style={'buttonPrimary'} click={handlerPdfButton}>Guardar</Button>
-<InvoicePDF>
-                        <Button style={'buttonSecondary'}>Completar</Button>
-</InvoicePDF>
+                        <Button style={'buttonPrimary'} click={handlerPdfButton}>Generar N°</Button>
+<InvoicePDF />
+             
                     </div>
                         
                                         
