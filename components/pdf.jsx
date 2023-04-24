@@ -454,9 +454,9 @@ const PDFView = ({click}) => {
 
                
                    
-<div style={{padding: '0px'}}>
+
                     <Button style={'buttonSecondary'} click={click}>pdf</Button>
-                </div>               
+                  
             </PDFDownloadLink>}
         </>
     )
