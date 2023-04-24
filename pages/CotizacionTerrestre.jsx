@@ -92,17 +92,6 @@ function CotizacionTerrestre() {
     function handlerPdfButton() {
 
 let cotizacionNo = userDB.CotizacionTerrestre
-            ? `${userDB.CotizacionTerrestre + 1 < 10 ? '00' : ''}${userDB.CotizacionTerrestre + 1 > 9
-                && userDB.CotizacionTerrestre + 1 < 100 ? '0' : ''}${userDB.CotizacionTerrestre + 1}/${new Date().getFullYear().toString().substring(2, 4)}` : `001/${new Date().getFullYear().toString().substring(2, 4)}`
-        let date = getDayMonthYear()
-
-            userDB !== '' && setUserPdfData({
-            ...pdfData,
-            ["CT-COTIZACIÓN No"]: cotizacionNo,
-            ["CT-FECHA"]: date
-        })
-
-
         setUserPdfData({ ...pdfData, tarifa, otrosGastos, incluye, excluye })
         let object = {
             CotizacionTerrestre: userDB.CotizacionTerrestre ? userDB.CotizacionTerrestre + 1 : 1
@@ -215,13 +204,21 @@ let cotizacionNo = userDB.CotizacionTerrestre
     }
     console.log(pdfData)
 
-    function handlerPDFTester() {
+    useEffect(() => {
+        let cotizacionNo = userDB.CotizacionTerrestre
+            ? `${userDB.CotizacionTerrestre + 1 < 10 ? '00' : ''}${userDB.CotizacionTerrestre + 1 > 9
+                && userDB.CotizacionTerrestre + 1 < 100 ? '0' : ''}${userDB.CotizacionTerrestre + 1}/${new Date().getFullYear().toString().substring(2, 4)}` : `001/${new Date().getFullYear().toString().substring(2, 4)}`
+        let date = getDayMonthYear()
 
-        setUserPdfData({ ...pdfData, tarifa, otrosGastos, incluye, excluye })
 
+        userDB !== '' && setUserPdfData({
+            ...pdfData,
+            ["CT-COTIZACIÓN No"]: cotizacionNo,
+            ["CT-FECHA"]: date
+        })
 
-        // router.push('/PdfView')
-    }
+    }, [userDB, tarifa]);
+
 
     return (
         <Layout>
