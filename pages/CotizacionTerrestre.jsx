@@ -204,6 +204,16 @@ let cotizacionNo = userDB.CotizacionTerrestre
     }
     console.log(pdfData)
 
+
+
+
+function savai (word) {
+}
+
+function complete (word) {
+}
+
+
     useEffect(() => {
         let cotizacionNo = userDB.CotizacionTerrestre
             ? `${userDB.CotizacionTerrestre + 1 < 10 ? '00' : ''}${userDB.CotizacionTerrestre + 1 > 9
@@ -478,9 +488,9 @@ let cotizacionNo = userDB.CotizacionTerrestre
                     <br />
 
 <div className={style.containerFilter}>
-                        <Button style={'buttonPrimary'} click={handlerFilterButton}>Guardar</Button>
+                        <Button style={'buttonPrimary'} click={()=>savai('incluye')}>Guardar</Button>
 
-                        <Button style={'buttonSecondary'} click={handlerFilterButton}>Completar</Button>
+                        <Button style={'buttonSecondary'} click={()=>complete('incluye')}>Completar</Button>
                     </div>
                     <br />
 
@@ -498,14 +508,13 @@ let cotizacionNo = userDB.CotizacionTerrestre
                     <br />
 
 <div className={style.containerFilter}>
-                        <Button style={'buttonPrimary'} click={handlerFilterButton}>Guardar</Button>
+                        <Button style={'buttonPrimary'} click={()=>savei('excluye')}>Guardar</Button>
 
-                        <Button style={'buttonSecondary'} click={handlerFilterButton}>Completar</Button>
+                        <Button style={'buttonSecondary'} click={()=>complete('excluye'}>Completar</Button>
                     </div>
                     <br />
 
-                    <div className={style.subtitle}>EXCLUYE <span className={style.counterPluss} onClick={() => handlerCounterFour('pluss')}>+</span> <span className={style.counterLess} onClick={() => handlerCounterFour('less')}>-</span></div>
-
+<div className={style.subtitle}>EXCLUYE <span className={style.counterPluss} onClick={() => handlerCounterFour('pluss')}>+</span> <span className={style.counterLess} onClick={() => handlerCounterFour('less')}>-</span></div>
                     {
                         excluye.map((i, index) => {
                             return (
