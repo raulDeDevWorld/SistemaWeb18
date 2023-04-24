@@ -535,12 +535,12 @@ let cotizacionNo = userDB.CotizacionTerrestre
                         <Button style={'buttonPrimary'} click={handlerPdfButton}>Generar N°</Button>
 
 
-<InvoicePDF />
+
 </div>
 
 
              
-                
+         <InvoicePDF />       
                         
                                         
 
