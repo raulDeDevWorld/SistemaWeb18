@@ -90,6 +90,19 @@ function CotizacionTerrestre() {
 
 
     function handlerPdfButton() {
+
+let cotizacionNo = userDB.CotizacionTerrestre
+            ? `${userDB.CotizacionTerrestre + 1 < 10 ? '00' : ''}${userDB.CotizacionTerrestre + 1 > 9
+                && userDB.CotizacionTerrestre + 1 < 100 ? '0' : ''}${userDB.CotizacionTerrestre + 1}/${new Date().getFullYear().toString().substring(2, 4)}` : `001/${new Date().getFullYear().toString().substring(2, 4)}`
+        let date = getDayMonthYear()
+
+            userDB !== '' && setUserPdfData({
+            ...pdfData,
+            ["CT-COTIZACIÓN No"]: cotizacionNo,
+            ["CT-FECHA"]: date
+        })
+
+
         setUserPdfData({ ...pdfData, tarifa, otrosGastos, incluye, excluye })
         let object = {
             CotizacionTerrestre: userDB.CotizacionTerrestre ? userDB.CotizacionTerrestre + 1 : 1
@@ -209,28 +222,6 @@ function CotizacionTerrestre() {
 
         // router.push('/PdfView')
     }
-
-
-
-
-
-    useEffect(() => {
-        let cotizacionNo = userDB.CotizacionTerrestre
-            ? `${userDB.CotizacionTerrestre + 1 < 10 ? '00' : ''}${userDB.CotizacionTerrestre + 1 > 9
-                && userDB.CotizacionTerrestre + 1 < 100 ? '0' : ''}${userDB.CotizacionTerrestre + 1}/${new Date().getFullYear().toString().substring(2, 4)}` : `001/${new Date().getFullYear().toString().substring(2, 4)}`
-        let date = getDayMonthYear()
-
-
-        userDB !== '' && setUserPdfData({
-            ...pdfData,
-            ["CT-COTIZACIÓN No"]: cotizacionNo,
-            ["CT-FECHA"]: date
-        })
-
-    }, [userDB, tarifa]);
-
-
-
 
     return (
         <Layout>
@@ -543,9 +534,13 @@ function CotizacionTerrestre() {
 
                 </form>
             </div>}
-
-                        <Button style={'buttonPrimary'} click={handlerFilterButton}>GENAREAR N° IMPRESIÓN</Button>
-<InvoicePDF click={handlerPdfButton} />
+<div className={style.containerFilter}>
+                        <Button style={'buttonPrimary'} click={handlerPdfButton}>Guardar</Button>
+<InvoicePDF>
+                        <Button style={'buttonSecondary'}>Completar</Button>
+<InvoicePDF />
+                    </div>
+                        
                                         
 
             
