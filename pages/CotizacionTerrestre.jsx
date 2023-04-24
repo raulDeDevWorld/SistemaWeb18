@@ -547,13 +547,11 @@ function complete (word) {
 
 </div>
 
-<div className={style.containerFilter}>
 
              
          <InvoicePDF />       
                         
-                 </div>                       
-
+              
             
 
             <br />
