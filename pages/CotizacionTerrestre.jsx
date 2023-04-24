@@ -538,11 +538,12 @@ let cotizacionNo = userDB.CotizacionTerrestre
 
 </div>
 
+<div className={style.containerFilter}>
 
              
          <InvoicePDF />       
                         
-                                        
+                 </div>                       
 
             
 
