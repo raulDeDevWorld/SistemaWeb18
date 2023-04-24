@@ -534,9 +534,9 @@ let cotizacionNo = userDB.CotizacionTerrestre
 <div className={style.containerFilter}>
                         <Button style={'buttonPrimary'} click={handlerPdfButton}>Generar N°</Button>
 </div>
-<div className={style.containerFilter}>
+
 <InvoicePDF />
-             </div>
+             
                 
                         
                                         
