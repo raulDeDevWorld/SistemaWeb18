@@ -543,7 +543,12 @@ function CotizacionTerrestre() {
 
                 </form>
             </div>}
-            <InvoicePDF click={handlerPdfButton} />
+<div className={style.containerFilter}>
+                        <Button style={'buttonPrimary'} click={handlerFilterButton}>GENAREAR N° IMPRESIÓN</Button>
+<InvoicePDF click={handlerPdfButton} />
+                    </div>                        
+
+            
 
             <br />
             <br />
