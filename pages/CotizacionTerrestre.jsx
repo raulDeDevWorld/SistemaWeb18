@@ -544,12 +544,12 @@ function complete (word) {
                         <Button style={'buttonPrimary'} click={handlerPdfButton}>Generar N°</Button>
 
 
-
+<InvoicePDF />       
 </div>
 
 
              
-         <InvoicePDF />       
+        
                         
               
             
