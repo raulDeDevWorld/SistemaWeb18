@@ -541,8 +541,9 @@ function complete (word) {
                 </form>
             </div>}
 <div className={style.containerFilter}>
+<div className={style.containerFilter}>
                         <Button style={'buttonPrimary'} click={handlerPdfButton}>Generar N°</Button>
-
+</div>
 
 <InvoicePDF />       
 </div>
