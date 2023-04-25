@@ -198,7 +198,7 @@ const PDFView = ({click}) => {
     console.log(pdfData)
 
     return (
-        <div style={{    width: '100%', background: 'red'}}>
+        <div style={{  textAlign: 'center',  width: '100%', background: 'red'}}>
             {isCliente && <PDFDownloadLink document={
                 <Document>
                     <Page style={styles.body} size="A4" fixed >
@@ -451,15 +451,13 @@ const PDFView = ({click}) => {
                 </Document>}
                 fileName='Cotizacion Terrestre'>
 
-
-               <div style={{display: 'inline-block', position: 'relative', left: '0', right: '0', margin: 'auto'}}>
                    
 
                     <Button style={'buttonSecondary'} click={click}>pdf</Button>
                   
 
 
-</div>
+
             </PDFDownloadLink>}
         </div>
     )
