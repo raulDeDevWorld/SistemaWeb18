@@ -541,7 +541,7 @@ function complete (word) {
                 </form>
             </div>}
 <div className={style.containerFilter}>
-<div className={style.containerFilter}>
+<div style={{width: '40%', display:'flex', justifyContent: 'right'}}>
                         <Button style={'buttonPrimary'} click={handlerPdfButton}>Generar N°</Button>
 </div>
 
